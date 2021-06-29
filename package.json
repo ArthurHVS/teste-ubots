@@ -4,8 +4,10 @@
   "description": "Teste Tecnico",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "production": "pm2 start ecosystem.config.js --env production",
+    "dev": "pm2 start ecosystem.config.js --env development",
+    "quick": "PORT=3333 node server.js ",
+    "test": "mocha --timeout 1000"
   },
   "keywords": [
     "velasquinho",
@@ -14,9 +16,12 @@
   "author": "Arthur Henrique Verdadeiro Silva",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
     "lodash": "^4.17.21",
+    "mocha": "^9.0.1",
     "request": "^2.88.2"
   }
 }

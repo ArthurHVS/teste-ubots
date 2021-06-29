@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
                 })
             })
             comprasTotais.sort((a, b) => (a.compras < b.compras) ? 1 : -1)
-            res.send(comprasTotais[0])
+            res.send(comprasTotais.slice(-req.query.limite))
         })
     })
 });

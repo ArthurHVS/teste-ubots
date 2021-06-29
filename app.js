@@ -15,22 +15,18 @@ app.use(helmet.referrerPolicy());
 app.use(helmet.xssFilter());
 
 app.get('/', (req, res) => {
-    // Raíz da UI.
+    res.redirect('/lista');
 });
 
-//Rota da lista, feita...
 const rotaLista = require('./api/lista.js');
 app.use('/lista', rotaLista);
 
-//Rota da maior compra, feita...
 const rotaMaior = require('./api/maior.js');
 app.use('/maior', rotaMaior);
 
-//Rota do cliente mais fiel, feita...
 const rotaFiel = require('./api/fiel.js');
 app.use('/fiel', rotaFiel);
 
-//Rota da recomendação, WIP...
 const rotaRecomenda = require('./api/recomenda.js');
 app.use('/recomenda', rotaRecomenda);
 

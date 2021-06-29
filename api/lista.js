@@ -21,6 +21,7 @@ router.get('/', (req, res) => {
                     }
                 })
                 gastosTotais.push({
+                    id: cliente.id,
                     nome: cliente.nome,
                     cpf: sanitizeCPF(cliente.cpf),
                     gastoTotal: parseFloat(gastoCliente.toFixed(2))
