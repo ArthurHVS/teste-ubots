@@ -1,0 +1,22 @@
+{
+  "name": "ubots",
+  "version": "1.0.0",
+  "description": "Teste Tecnico",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "velasquinho",
+    "vinho"
+  ],
+  "author": "Arthur Henrique Verdadeiro Silva",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "lodash": "^4.17.21",
+    "request": "^2.88.2"
+  }
+}
